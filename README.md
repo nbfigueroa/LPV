@@ -29,6 +29,14 @@ $ sudo make install
 ```
 This will create one executable ``./test_lpvDS`` to test the class which will placed in ``~/lpvDS-lib/test``.
 
+If the test works [see below for the expected output], it's safe to say that you can use this library in your own project, to include it, add the following lines to your CMakeLists.txt (assuming ```test-lpvDS.cpp``` is where you want to use the library)
+```
+find_package (Eigen3 REQUIRED) 
+include_directories(include ${LPVDS-LIB_INCLUDE_DIRS})
+
+add_executable(test-lpv src/test-lpvDS.cpp)
+target_link_libraries(test-lpv lpvDS-lib)
+
 ---
 
 ### Usage
