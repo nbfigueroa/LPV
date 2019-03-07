@@ -19,11 +19,7 @@
 #include <stdlib.h>
 #include <string>
 #include "eigen3/Eigen/Dense"
-#include "ros/ros.h"
 #include "utils.h"
-
-/* To used the class in the ds_motion_generators package */
-#include "MathLib.h"
 
 using namespace std;
 using namespace Eigen;
@@ -55,7 +51,6 @@ public:
 
         MatrixXd         compute_A(VectorXd xi);
         VectorXd         compute_f(VectorXd xi, VectorXd att);
-        MathLib::Vector  compute_f(MathLib::Vector xi, MathLib::Vector att);
         VectorXd         compute_gamma(VectorXd xi);
 
 private:

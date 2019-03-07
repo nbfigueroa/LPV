@@ -24,7 +24,6 @@
 #include <stdlib.h>
 #include <string>
 #include "eigen3/Eigen/Dense"
-#include "ros/ros.h"
 #include "utils.h"
 
 

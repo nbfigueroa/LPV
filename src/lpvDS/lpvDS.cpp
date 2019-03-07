@@ -97,10 +97,7 @@ lpvDS::~lpvDS(){
 
 void lpvDS::ERROR()
 {
-    while(ros::ok())
-    {
-
-    }
+    cout << "SOMETHING IS WRONG!!!" << endl;
 }
 
 void lpvDS::setup_params()
@@ -415,45 +412,6 @@ VectorXd   lpvDS::compute_f(VectorXd xi, VectorXd att){
 
     return xi_dot;
 }
-
-
-MathLib::Vector lpvDS::compute_f(MathLib::Vector xi, MathLib::Vector att){
-
-    /* Check size of input vectors */
-
-    if (xi.Size() != M_){
-        cout<<"The dimension of X in compute_f is wrong."<<endl;
-        cout<<"Dimension of states is: "<<M_<<endl;
-        cout<<"You provided a vector of size "<< xi.Size()<<endl;
-        ERROR();
-    }
-    if (att.Size() != M_){
-        cout<<"The dimension of X in compute_f is wrong."<<endl;
-        cout<<"Dimension of states is: "<<M_<<endl;
-        cout<<"You provided a vector of size "<< att.Size()<<endl;
-        ERROR();
-    }
-
-    /* Fill in VectorXd versions of xi and att */
-    VectorXd xi_;  xi_.resize(M_);   xi_.setZero();
-    VectorXd att_; att_.resize(M_);  att_.setZero();
-    for (int m=0;m<M_;m++){
-        xi_[m]  = xi[m];
-        att_[m] = att[m];
-    }
-
-    /* Compute Desired Velocity */
-    VectorXd xi_dot_;  xi_dot_.resize(M_);    xi_dot_.setZero();
-    xi_dot_ = compute_f(xi_,att_);
-
-    /* Transform Desired Velocity to MathLib form */
-    MathLib::Vector xi_dot; xi_dot.Resize(M_);
-    for (int m=0;m<M_;m++)
-        xi_dot[m] = xi_dot_[m];
-
-    return xi_dot;
-}
-
 
 
 double lpvDS::GaussianPDF(VectorXd x, VectorXd Mu, MatrixXd Sigma){

@@ -188,10 +188,7 @@ double GMM::PDF(VectorXd X)
 
 void GMM::ERROR()
 {
-    while(ros::ok())
-    {
-
-    }
+    cout << "SOMETHING IS WRONG!!!" << endl;
 }
 double GMM::GaussianPDF(VectorXd x,VectorXd Mu,MatrixXd Sigma)
 {
