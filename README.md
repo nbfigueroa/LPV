@@ -12,7 +12,7 @@ is learned from demonstrations in a decoupled manner. Where the GMM parameters <
 The whole learning scheme is provided in [ds-opt](https://github.com/nbfigueroa/ds-opt). This formulation and learning approach enables the accurate encoding of highly non-linear, non-monotic trajectories, as the ones below:
 
 <p align="center">
-<img src="https://github.com/nbfigueroa/lpvDS-lib/blob/agnostic/img/coManip-ds-0.jpg"  width="450"><img src="https://github.com/nbfigueroa/lpvDS-lib/blob/agnostic/img/coManip-ds-1.jpg"  width="450"></>
+<img src="https://github.com/nbfigueroa/lpvDS-lib/blob/agnostic/img/coManip-ds-0.jpg"  width="400"><img src="https://github.com/nbfigueroa/lpvDS-lib/blob/agnostic/img/coManip-ds-1.jpg"  width="400"></>
 
 while ensuring global asymptotic stability. To learn DS with this formulation and with any of the two Lyapunov constraints defined above go to the [ds-opt](https://github.com/nbfigueroa/ds-opt) package. 
 
