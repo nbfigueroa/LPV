@@ -29,7 +29,7 @@ using namespace std;
 int
 main (int argc, char **argv)
 {
-    string path_model  = "/home/nbfigueroa/proj/catkin_ws_icub/src/lpvDS/models/coManip-DS-0/";
+    string path_model  = "/home/nbfigueroa/yarp_ws/controller_dir/lpvDS-lib/models/coManip-DS-1/";
     string path_dim    = path_model +  "dimensions";
     string path_Priors = path_model +  "Priors";
     string path_Mu     = path_model +  "Mu";
