@@ -43,6 +43,10 @@ Examples of these files are provided in the ``models/`` folder. To generate thes
 
 - For text files, you have multiple initialization options:
 ```C++
+  /* Include Library Headers */
+  #include "lpvDS.h"
+  #include "utils.h"
+  
   /* Instantiate an LPV-DS class Option 1 */
   lpvDS lpvDS_(path_dim.c_str());
   lpvDS_.initialize_gamma(path_Priors.c_str(), path_Mu.c_str(), path_Sigma.c_str());
@@ -53,6 +57,10 @@ Examples of these files are provided in the ``models/`` folder. To generate thes
 ```
 Or you can read the parameter files using the ``fileUtils`` class and initialize an lpvDS class instance as follows:
 ```C++
+   /* Include Library Headers */
+   #include "lpvDS.h"
+   #include "utils.h"
+  
    /* Instantiate an LPV-DS class Option 3 */
    fileUtils fileUtils_;
    MatrixXd dim, Priors, Mu, Sigma, A;
