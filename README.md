@@ -9,7 +9,7 @@ is learned from demonstrations in a decoupled manner. Where the GMM parameters <
 - QLF (Quadratic Lyapunov Function): <img src="https://github.com/nbfigueroa/LPV/blob/nadia/img/stab_qlf.gif">
 - P-QLF(Parametrized QLF):  <img src="https://github.com/nbfigueroa/LPV/blob/nadia/img/stab_pqlf.gif">  
 
-The whole learning scheme is provided in [ds-opt](https://github.com/nbfigueroa/ds-opt). This formulation and learning approach enables the accurate encoding of highly non-linear, non-monotic trajectories, as the ones below:
+The whole learning scheme is provided in [ds-opt](https://github.com/nbfigueroa/ds-opt). This formulation and learning approach enables the accurate encoding of highly non-linear trajectories with distance to target non-monotically decreasing, as the ones below:
 
 <p align="center">
 <img src="https://github.com/nbfigueroa/LPV/blob/nadia/img/3D-CShape-bottom_lpvO3.png"  width="350"><img src="https://github.com/nbfigueroa/LPV/blob/nadia/img/3D-Sink_lpvO3.png"  width="350"></>
